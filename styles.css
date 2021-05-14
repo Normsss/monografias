@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+  font-family:Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#item1 { grid-area: item1; }
+#item2 { grid-area: item2; }
+#item3 { grid-area: item3; }
+#item4 { grid-area: item4; }
+#item5 { grid-area: item5; }
+#item6 { grid-area: item6; }
+#item7 { grid-area: item7;}
+#item8 { grid-area: item8; }
+#item9 { grid-area: item9; }
+#item10 { grid-area: item10; }
+#item11 { grid-area: item11; }
+
+
+
+#grid-container {
+  display: grid;
+  grid-template-areas:
+    'item1 item1 item2 item3'
+    'item1 item1 item4 item5'
+    'item6 item7 item7 item8'
+    'item9 item10 item10 item11';
+  grid-gap: 1px 1px;
+  max-width: 932px;
+  margin: auto;
+  padding-bottom: 60px;
+  
+}
+
+figcaption {
+  text-align: center;
+  font-size: 1.3vw;
+}
+
+.info {
+  margin: 10px;
+  text-transform: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* ---- flip with text ---- */
+img{
+  width: 100%;
+  height: auto;
+  
+}
+
+#item1.flip-box, #item7.flip-box, #item10.flip-box {
+  width: 100%;
+  height: auto;
+}
+
+.flip-box {
+  /* background-color: transparent; */
+  width: 100%;
+  height: 190px;
+  padding: 10px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+}
+
+/* .flip-box:hover .flip-box-inner { */
+.is-flipped .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+ 
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #596872;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* ---- tablet ---- */
+@media (min-width: 747px) and (max-width: 911px) { 
+  #grid-container {
+    transform: scale(.8);
+    grid-gap: 0px 10px ;
+  }
+  .flip-box {
+    /* background-color: transparent; */
+    width: 100%;
+    height: 180px;
+  }
+
+}
+
+/* ---- tablet s ---- */
+@media (max-width: 746px) and (min-width: 668px) {
+
+  #grid-container {
+    display: grid;
+    /* transform: scale(.8); */
+    grid-gap: 0px 10px ;
+    margin: auto;
+    padding: 3%;
+  }
+  .flip-box {
+    /* background-color: transparent; */
+    width: 100%;
+    height: 140px;
+  
+  }
+  img{
+    width: 100%;
+    height: auto;
+  }
+  h1{
+    font-size: 4vw;
+  }
+  #item1.flip-box, #item7.flip-box, #item10.flip-box {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+/* ---- movile ---- */
+@media (max-width: 667px){
+  
+  #grid-container {
+    display: block;
+   padding: 2% 10% 10% 10%;
+  }
+  
+  
+  h1{
+    font-size: 4vw;
+  }
+  figcaption {
+    font-size: 2.5vw;
+    margin-top: 9px;
+  }
+
+  .flip-box {
+    /* background-color: transparent; */
+    margin: auto;
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+  }
+  #item7.flip-box, #item10.flip-box {
+    width: 100%;
+    height: 220px;
+  }
+  #item1.flip-box {
+    width: 100%;
+    height: 400px;
+  }
+  footer {
+    position: relative;
+  }
+ 
+}
+
+/* footer */
+footer {
+  font-family: 'Rajdhani', sans-serif;
+  background: #ebedee;
+  position: relative;
+  display: flex;
+  bottom: 0px;
+  padding: 15px;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: space-between; 
+  color:  #0d253f;
+  /* background: linear-gradient(to top, #0d253f, transparent); */
+}
+#logo {
+  margin: 10px 10px 0px;
+}
+#logo img {
+  width: 50px;  
+}
+
+#platlab{
+  margin: 10px 10px 0px;
+}
+#platlab > p > a{
+  color:  #0d253f
+}
+p {
+  text-transform: none;
+}
+/* end footer */
