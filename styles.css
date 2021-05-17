@@ -55,6 +55,11 @@ figcaption {
   text-transform: none;
 }
 
+#logo a img{
+  border: none;
+}
+
+
 
 h1 {
   text-align: center;
@@ -64,6 +69,7 @@ h1 {
 img{
   width: 100%;
   height: auto;
+  border: 2px solid;
 }
 
  #item7.flip-box, #item10.flip-box {
