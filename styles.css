@@ -120,6 +120,7 @@ img{
   background-color: #596872;
   color: white;
   transform: rotateY(180deg);
+  overflow: scroll;
 }
 
 /* ---- tablet ---- */
@@ -281,5 +282,7 @@ footer {
 }
 p {
   text-transform: none;
+  text-align: left;
+  font-size:x-small;
 }
 /* end footer */
